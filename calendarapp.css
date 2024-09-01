@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-59%, -50%);
+    user-select: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+    .calendar{
+        width: 546px;
+        height: 600px;
+        background-color: #fff;
+        box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+        font-family: "poppins", sans-serif;
+        overflow: hidden;
+    }
+
+.calendar .digital-clock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+
+}
+.digital-clock:hover{
+    background: linear-gradient(to top, #008184 0%, #005658 100%);
+}
+.digital-clock .time{
+    font-size: 50px;
+    color: #fff;
+}
+.digital-clock .time .format{
+    font-size: 25px;
+} 
+.calendar .month{
+    width: 100%;
+    background-color: #008184;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 84px 30px 40px 30px;
+    text-align: center;
+}
+.month h2{
+    font-size: 32px;
+    margin-top: 25px;
+}
+.month p{
+    margin-top: 5px;
+    font-size: 17px;
+}
+.month .arrow{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #016d6f;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.month .arrow:hover{
+    background-color: #005758;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.weekdays div, .days div {
+    width: calc(100% / 7);
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.weekdays div {
+    font-weight: bold;
+    color: #333;
+}
+
+.days div {
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.days div:hover {
+    background: #016d6f;
+    color: #fff;
+}
+
+.days .today {
+    background: #016d6f;
+    color: #fff;
+    border-radius: 50%;
+}
